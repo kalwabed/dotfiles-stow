@@ -14,7 +14,7 @@ set -gx EDITOR nvim
 set fzf_preview_file_cmd nvim
 
 # User abbreviations
-abbr -a -g ytmp3 'youtube-dl --extract-audio --audio-format mp3' # Convert/Download YT videos as mp3
+abbr -a -g ytmp3 'yt-dlp -x' # Convert/Download YT videos as mp3
 abbr -a -g cls clear # Clear
 abbr -a -g upd 'paru -Syu' # Update everything
 abbr -a -g sayonara 'shutdown now' # Epic way to shutdown
