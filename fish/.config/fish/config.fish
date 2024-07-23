@@ -1,6 +1,7 @@
 # source /usr/share/cachyos-fish-config/cachyos-config.fish
 
 if status is-interactive
+    eval (zellij setup --generate-auto-start fish | string collect)
     krabby random
 end
 
@@ -13,10 +14,32 @@ set -gx myname kalwabed
 set -gx EDITOR nvim
 set fzf_preview_file_cmd nvim
 
+# Format man pages
+set -x MANROFFOPT -c
+set -x MANPAGER "sh -c 'col -bx | bat -l man -p'"
+
+# Set settings for https://github.com/franciscolourenco/done
+set -U __done_min_cmd_duration 10000
+set -U __done_notification_urgency_level low
+
+## Enable Wayland support for different applications
+if [ "$XDG_SESSION_TYPE" = wayland ]
+    set -gx WAYLAND 1
+    set -gx QT_QPA_PLATFORM 'wayland;xcb'
+    set -gx GDK_BACKEND 'wayland,x11'
+    set -gx MOZ_DBUS_REMOTE 1
+    set -gx MOZ_ENABLE_WAYLAND 1
+    set -gx _JAVA_AWT_WM_NONREPARENTING 1
+    set -gx BEMENU_BACKEND wayland
+    set -gx CLUTTER_BACKEND wayland
+    set -gx ECORE_EVAS_ENGINE wayland_egl
+    set -gx ELM_ENGINE wayland_egl
+end
+
 # User abbreviations
 abbr -a -g ytmp3 'yt-dlp -x' # Convert/Download YT videos as mp3
 abbr -a -g cls clear # Clear
-abbr -a -g upd 'paru -Syu' # Update everything
+abbr -a -g update 'paru -Syu' # Update everything
 abbr -a -g sayonara 'shutdown now' # Epic way to shutdown
 abbr -a -g shinei 'kill -9' # Kill ala DIO
 abbr -a -g priv 'fish --private' # Fish incognito mode
@@ -43,7 +66,7 @@ abbr -a -g cat bat
 abbr -a -g hx helix
 abbr -a -g top btop
 abbr -a -g lg lazygit
-abbr -a -g icat "kitten icat"
+abbr -a -g jctl "journalctl -p 3 -xb"
 
 # pnpm alias
 abbr -a -g pn pnpm
@@ -52,3 +75,17 @@ abbr -a -g pna "pnpm add"
 abbr -a -g pnad "pnpm add -D"
 abbr -a -g pnu "pnpm up -Li"
 abbr -a -g pnd "pnpm run dev"
+
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias ......='cd ../../../../..'
+
+# bun
+set -x BUN_INSTALL "$HOME/.bun"
+set -x PATH $BUN_INSTALL/bin $PATH
+
+# deno
+set -x DENO_INSTALL "$HOME/.deno"
+set -x PATH $DENO_INSTALL/bin $PATH
