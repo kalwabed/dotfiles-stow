@@ -55,7 +55,15 @@ return {
     },
   },
 
-  { "ellisonleao/gruvbox.nvim" },
+  {
+    "ellisonleao/gruvbox.nvim",
+    lazy = false,
+    priority = 1000,
+    config = true,
+    opts = {
+      transparent_mode = true,
+    },
+  },
   { "samharju/synthweave.nvim" },
   { "marko-cerovac/material.nvim" },
   { "rose-pine/neovim", name = "rose-pine" },
