@@ -5,7 +5,8 @@ return {
   opts = {
     servers = {
       volar = {
-        filetypes = { "typescript", "javascript", "vue" },
+        -- filetypes = { "typescript", "javascript", "vue" },
+        filetypes = { "vue" },
         init_options = {
           vue = {
             hybridMode = false,
