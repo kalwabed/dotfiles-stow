@@ -24,7 +24,18 @@ return {
     cmd = "IncRename",
     config = true,
   },
-
+  {
+    "max397574/better-escape.nvim",
+    event = "VeryLazy",
+    config = function()
+      require("better_escape").setup()
+    end,
+  },
+  {
+    "chentoast/marks.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
   -- Add Eslint and use it for formatting
   -- {
   --   "neovim/nvim-lspconfig",
