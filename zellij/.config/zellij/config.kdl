@@ -1,4 +1,11 @@
 // If you'd like to override the default keybindings completely, be sure to change "keybinds" to "keybinds clear-defaults=true"
+
+ui {
+    pane_frames {
+        hide_session_name true
+    }
+}
+
 keybinds {
     normal {
         // uncomment this and adjust key if using copy_on_select=false
@@ -211,7 +218,7 @@ plugins {
 //    - true
 //    - false (Default)
 //
-// simplified_ui true
+simplified_ui true
 
 // Choose the path to the default shell that zellij will use for opening new panes
 // Default: $SHELL
@@ -227,7 +234,7 @@ plugins {
 //   - true (default)
 //   - false
 //
-// pane_frames true
+pane_frames false
 
 // Toggle between having Zellij lay out panes according to a predefined set of layouts whenever possible
 // Options:
