@@ -1,0 +1,10 @@
+font-family="Iosevka Term Expanded"
+font-size=10
+theme="GruvboxDark"
+background-opacity=0.80
+gtk-wide-tabs=false
+adw-toolbar-style=flat
+gtk-tabs-location=hidden
+window-decoration=true
+gtk-titlebar=false
+
