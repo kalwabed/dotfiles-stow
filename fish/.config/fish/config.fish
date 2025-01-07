@@ -67,6 +67,7 @@ abbr -a -g hx helix
 abbr -a -g top btop
 abbr -a -g lg lazygit
 abbr -a -g jctl "journalctl -p 3 -xb"
+abbr -a -g nv nvim
 
 # pnpm alias
 abbr -a -g pn pnpm

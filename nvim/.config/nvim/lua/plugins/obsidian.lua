@@ -15,7 +15,7 @@ return {
   dependencies = {
     -- Required.
     "nvim-lua/plenary.nvim",
-    "hrsh7th/nvim-cmp",
+    -- "hrsh7th/nvim-cmp",
   },
   opts = {
     workspaces = {
