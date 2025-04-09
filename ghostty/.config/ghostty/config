@@ -1,9 +1,15 @@
 font-family="Iosevka Term Expanded"
-font-size=10
-theme="GruvboxDark"
+font-size=12
+theme="Kanagawa Wave"
 background-opacity=0.80
 gtk-wide-tabs=false
 adw-toolbar-style=flat
 gtk-tabs-location=hidden
 window-decoration=true
 gtk-titlebar=false
+macos-option-as-alt=true
+window-width=120
+window-height=50
+background-blur-radius=20
+macos-titlebar-style=hidden
+mouse-hide-while-typing=true

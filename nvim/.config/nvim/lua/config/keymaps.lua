@@ -17,7 +17,7 @@ keymap({ "n", "v" }, "<tab>", "%")
 -- Duplicate a line and comment out the first line
 keymap("n", "yc", "yygccp", { remap = true, desc = "Duplicate a line and comment out the first line" })
 
-keymap("n", "<C-j>", ":Treewalker Down<CR>", { noremap = true, silent = true })
-keymap("n", "<C-k>", ":Treewalker Up<CR>", { noremap = true, silent = true })
-keymap("n", "<C-h>", ":Treewalker Left<CR>", { noremap = true, silent = true })
-keymap("n", "<C-l>", ":Treewalker Right<CR>", { noremap = true, silent = true })
+-- keymap("n", "<C-j>", ":Treewalker Down<CR>", { noremap = true, silent = true })
+-- keymap("n", "<C-k>", ":Treewalker Up<CR>", { noremap = true, silent = true })
+-- keymap("n", "<C-h>", ":Treewalker Left<CR>", { noremap = true, silent = true })
+-- keymap("n", "<C-l>", ":Treewalker Right<CR>", { noremap = true, silent = true })

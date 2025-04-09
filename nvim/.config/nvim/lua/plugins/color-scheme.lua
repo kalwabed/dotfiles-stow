@@ -1,9 +1,7 @@
 return {
   {
     "LazyVim/LazyVim",
-    opts = {
-      colorscheme = "gruvbox",
-    },
+    opts = { colorscheme = "kanagawa" },
   },
   {
     "folke/tokyonight.nvim",
@@ -11,11 +9,19 @@ return {
     priority = 1000,
     opts = {},
   },
+  -- {
+  --   "thesimonho/kanagawa-paper.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {},
+  -- },
   {
     "rebelot/kanagawa.nvim",
     lazy = false,
     priority = 1000,
-    opts = {},
+    opts = {
+      -- transparent = true,
+    },
   },
   {
     "sainnhe/gruvbox-material",
@@ -32,10 +38,11 @@ return {
     lazy = false,
     name = "catppuccin",
     opts = {
+      transparent_background = true,
       integrations = {
         aerial = true,
         alpha = true,
-        cmp = true,
+        cmp = false,
         dashboard = true,
         flash = true,
         gitsigns = true,

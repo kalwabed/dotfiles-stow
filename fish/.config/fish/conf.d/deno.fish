@@ -1,0 +1,1 @@
+source "/Users/khawarizm/.deno/env.fish"

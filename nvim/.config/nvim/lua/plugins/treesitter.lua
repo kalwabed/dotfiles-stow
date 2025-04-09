@@ -13,11 +13,4 @@ return {
       vim.treesitter.language.register("markdown", "mdx")
     end,
   },
-
-  {
-    "aaronik/treewalker.nvim",
-    opts = {
-      highlight = true, -- default is false
-    },
-  },
 }

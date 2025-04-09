@@ -1,5 +1,7 @@
 # source /usr/share/cachyos-fish-config/cachyos-config.fish
 
+fish_add_path /opt/homebrew/bin/
+
 if status is-interactive
     eval (zellij setup --generate-auto-start fish | string collect)
     krabby random
@@ -7,12 +9,16 @@ end
 
 starship init fish | source
 atuin init fish | source
+# Setup brew
+eval "$(/opt/homebrew/bin/brew shellenv)"
+set fish_greeting ""
 
 set -gx LC_CTYPE en_US.UTF-8
 set -gx LC_ALL en_US.UTF-8
 set -gx myname kalwabed
 set -gx EDITOR nvim
 set fzf_preview_file_cmd nvim
+set -g fish_key_bindings fish_vi_key_bindings
 
 # Format man pages
 set -x MANROFFOPT -c
@@ -90,3 +96,10 @@ set -x PATH $BUN_INSTALL/bin $PATH
 # deno
 set -x DENO_INSTALL "$HOME/.deno"
 set -x PATH $DENO_INSTALL/bin $PATH
+
+# pnpm
+set -gx PNPM_HOME /Users/khawarizm/Library/pnpm
+if not string match -q -- $PNPM_HOME $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
