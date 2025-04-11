@@ -12,7 +12,7 @@
         "parameters": {
           "basic.simultaneous_threshold_milliseconds": 50,
           "basic.to_delayed_action_delay_milliseconds": 500,
-          "basic.to_if_alone_timeout_milliseconds": 300,
+          "basic.to_if_alone_timeout_milliseconds": 200,
           "basic.to_if_held_down_threshold_milliseconds": 200,
           "mouse_motion_to_scroll.speed": 100
         },
@@ -32,36 +32,6 @@
                   }
                 ],
                 "to_if_alone": [{ "key_code": "escape" }],
-                "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Remap <A> to Hyper Arrow key when held, <A> when tapped",
-            "manipulators": [
-              {
-                "from": { "key_code": "a" },
-                "to": [
-                  {
-                    "key_code": "left_shift",
-                    "modifiers": ["any"]
-                  },
-                  {
-                    "set_variable": {
-                      "name": "harrows",
-                      "value": 1
-                    }
-                  }
-                ],
-                "to_after_key_up": [
-                  {
-                    "set_variable": {
-                      "name": "harrows",
-                      "value": 0
-                    }
-                  }
-                ],
-                "to_if_alone": [{ "key_code": "a" }],
                 "type": "basic"
               }
             ]
@@ -741,19 +711,14 @@
             ]
           },
           {
-            "description": "<A> key as a harrows",
+            "description": "Hyper Key base layer (Tab held down alone)",
             "manipulators": [
               {
                 "conditions": [
                   {
-                    "name": "harrows",
-                    "type": "variable_if",
-                    "value": 1
-                  },
-                  {
                     "name": "hyper",
                     "type": "variable_if",
-                    "value": 0
+                    "value": 1
                   },
                   {
                     "name": "hyper_sublayer_w",
@@ -783,14 +748,9 @@
               {
                 "conditions": [
                   {
-                    "name": "harrows",
-                    "type": "variable_if",
-                    "value": 1
-                  },
-                  {
                     "name": "hyper",
                     "type": "variable_if",
-                    "value": 0
+                    "value": 1
                   },
                   {
                     "name": "hyper_sublayer_w",
@@ -820,14 +780,9 @@
               {
                 "conditions": [
                   {
-                    "name": "harrows",
-                    "type": "variable_if",
-                    "value": 1
-                  },
-                  {
                     "name": "hyper",
                     "type": "variable_if",
-                    "value": 0
+                    "value": 1
                   },
                   {
                     "name": "hyper_sublayer_w",
@@ -857,14 +812,9 @@
               {
                 "conditions": [
                   {
-                    "name": "harrows",
-                    "type": "variable_if",
-                    "value": 1
-                  },
-                  {
                     "name": "hyper",
                     "type": "variable_if",
-                    "value": 0
+                    "value": 1
                   },
                   {
                     "name": "hyper_sublayer_w",
@@ -890,12 +840,7 @@
                   }
                 ],
                 "type": "basic"
-              }
-            ]
-          },
-          {
-            "description": "Hyper Key base layer (Tab held down alone)",
-            "manipulators": [
+              },
               {
                 "conditions": [
                   {
