@@ -49,6 +49,8 @@ local filetypes_with_dynamic_formatter = {
   "markdown.mdx",
   "graphql",
   "handlebars",
+  "php",
+  "blade",
 }
 
 return {

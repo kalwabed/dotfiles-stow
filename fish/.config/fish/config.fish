@@ -3,7 +3,7 @@
 fish_add_path /opt/homebrew/bin/
 
 if status is-interactive
-    # eval (zellij setup --generate-auto-start fish | string collect)
+    eval (zellij setup --generate-auto-start fish | string collect)
     krabby random
 end
 
