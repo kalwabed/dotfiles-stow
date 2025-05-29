@@ -14,10 +14,10 @@ return {
     end,
   },
 
-  {
-    "aaronik/treewalker.nvim",
-    opts = {
-      highlight = true, -- default is false
-    },
-  },
+  -- {
+  --   "aaronik/treewalker.nvim",
+  --   opts = {
+  --     highlight = true, -- default is false
+  --   },
+  -- },
 }
