@@ -45,7 +45,7 @@ end
 # User abbreviations
 abbr -a -g ytmp3 'yt-dlp -x' # Convert/Download YT videos as mp3
 abbr -a -g cls clear # Clear
-abbr -a -g update 'paru -Syu' # Update everything
+abbr -a -g update 'brew upgrade' # Update everything
 abbr -a -g sayonara 'shutdown now' # Epic way to shutdown
 abbr -a -g shinei 'kill -9' # Kill ala DIO
 abbr -a -g priv 'fish --private' # Fish incognito mode
