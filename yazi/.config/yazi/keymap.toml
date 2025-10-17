@@ -1,0 +1,4 @@
+[[mgr.prepend_keymap]]
+on = [ "f", "c" ]
+run = [ "plugin clippy" ]
+desc = "Copy with Clippy"

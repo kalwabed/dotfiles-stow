@@ -2,17 +2,63 @@
 	signingKey = 5326A0DFEF2F17EC
 	email = 49640654+kalwabed@users.noreply.github.com
 	name = "Kalwabed Rizki"
+
 [commit]
-	gpgsign = true
+	gpgSign = true
+
 [core]
 	editor = nvim
+  compression = 9
+  whitespace = error
+  preloadindex = true
+
+[advice]
+  addEmptyPathspec = true
+  statusHints = false
+
 [init]
 	defaultBranch = main
+
 [push]
 	autoSetupRemote = true
+  default = current
+  followTags = true
+
 [pull]
-	rebase = true
+  default = current
+	rebase = false
+
+[rebase]
+  autoStash = true
+  missingCommitsCheck = warn
+
+[log]
+  abbrevCommit = true
+
 [merge]
   conflictstyle = diff3
+
+[branch]
+  sort = -commiterdate
+
+[tag]
+  sort = -taggerdate
+
 [diff]
   colorMoved = default
+  context = 3
+  renames = copies
+  interHunkContext = 10
+
+[pager]
+  diff = diff-so-fancy | $PAGER
+  branch = false
+  tag = false
+
+[diff-so-fancy]
+  markEmptyLines = false
+
+[interactive]
+  diffFilter = diff-so-fancy --patch
+  singlekey = true
+

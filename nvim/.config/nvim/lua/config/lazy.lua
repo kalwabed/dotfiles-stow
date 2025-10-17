@@ -31,7 +31,7 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.astro" },
     { import = "lazyvim.plugins.extras.lang.svelte" },
     { import = "lazyvim.plugins.extras.lang.vue" },
-    { import = "lazyvim.plugins.extras.lang.php" },
+    -- { import = "lazyvim.plugins.extras.lang.php" },
     { import = "lazyvim.plugins.extras.coding.blink" },
     { import = "lazyvim.plugins.extras.editor.aerial" },
     { import = "lazyvim.plugins.extras.editor.harpoon2" },

@@ -44,6 +44,6 @@ return {
   },
   dependencies = {
     -- This plugin needs to be loaded as well otherwise Neovim can't find the LSP binary on $PATH.
-    "williamboman/mason.nvim",
+    "mason-org/mason.nvim",
   },
 }

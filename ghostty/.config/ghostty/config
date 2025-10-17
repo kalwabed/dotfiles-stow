@@ -1,6 +1,8 @@
-font-family="Iosevka Term Expanded"
+font-family="Iosevka Term Extended"
+# font-family = "Fira Code"
 font-size=12
-theme="Kanagawa Wave"
+# theme="Kanagawa Wave"
+theme="TokyoNight Moon"
 
 macos-option-as-alt=true
 macos-titlebar-style=hidden

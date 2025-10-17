@@ -5,10 +5,10 @@ fish_add_path /opt/homebrew/bin/
 if status is-interactive
     # eval (zellij setup --generate-auto-start fish | string collect)
     krabby random
+    atuin init fish | source
 end
 
 starship init fish | source
-atuin init fish | source
 # Setup brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
 set fish_greeting ""
