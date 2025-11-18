@@ -7,6 +7,9 @@ symbol = "  "
 [buf]
 symbol = " "
 
+[bun]
+symbol = " "
+
 [c]
 symbol = " "
 
@@ -15,6 +18,9 @@ symbol = " "
 
 [dart]
 symbol = " "
+
+[deno]
+symbol = " "
 
 [directory]
 read_only = " 󰌾"
@@ -34,6 +40,9 @@ symbol = " "
 [git_branch]
 symbol = " "
 ignore_branches = ['main', 'master']
+
+[git_commit]
+tag_symbol = '  '
 
 [git_status]
 ahead = '⇡${count}'
@@ -85,6 +94,9 @@ symbol = " "
 
 [nodejs]
 symbol = " "
+
+[ocaml]
+symbol = " "
 
 [os]
 disabled = false
