@@ -1,5 +1,5 @@
 [user]
-	signingKey = 5326A0DFEF2F17EC
+	signingKey = 2BFBED6B1E20B4C9
 	email = 49640654+kalwabed@users.noreply.github.com
 	name = "Kalwabed Rizki"
 
@@ -43,6 +43,7 @@
 
 [tag]
   sort = -taggerdate
+  gpgSign = true
 
 [diff]
   colorMoved = default

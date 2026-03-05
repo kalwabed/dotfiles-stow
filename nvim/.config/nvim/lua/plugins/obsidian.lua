@@ -1,8 +1,8 @@
 return {
-  "epwalsh/obsidian.nvim",
+  "obsidian-nvim/obsidian.nvim",
   version = "*", -- recommended, use latest release instead of latest commit
   -- lazy = true,
-  enabled = false,
+  enabled = true,
   event = "VeryLazy",
   ft = "markdown",
   -- Replace the above line with this if you only want to load obsidian.nvim for markdown files in your vault:
@@ -19,6 +19,7 @@ return {
     -- "hrsh7th/nvim-cmp",
   },
   opts = {
+    legacy_commands = false,
     workspaces = {
       {
         name = "personal",
@@ -38,7 +39,7 @@ return {
     completion = {
       -- Set to false to disable completion.
       blink_cmp = true,
-      nvim_cmp = true,
+      nvim_cmp = false,
       -- Trigger completion at 2 chars.
       min_chars = 2,
     },

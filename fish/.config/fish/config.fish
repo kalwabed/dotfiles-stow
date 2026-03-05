@@ -74,6 +74,8 @@ abbr -a -g top btop
 abbr -a -g lg lazygit
 abbr -a -g jctl "journalctl -p 3 -xb"
 abbr -a -g nv nvim
+abbr -a -g gpp "git pull -p"
+abbr -a -g gms "git pull -p && git pull origin master"
 
 # pnpm alias
 abbr -a -g pn pnpm
@@ -103,3 +105,9 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+# Added by Antigravity
+fish_add_path /Users/khawarizm/.antigravity/antigravity/bin
+
+# Created by `pipx` on 2026-02-08 01:05:04
+set PATH $PATH /Users/khawarizm/.local/bin

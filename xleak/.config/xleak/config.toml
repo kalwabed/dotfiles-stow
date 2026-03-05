@@ -1,0 +1,6 @@
+[ui]
+max_rows = 50
+column_width = 50
+
+[keybindings]
+profile = "vim"
