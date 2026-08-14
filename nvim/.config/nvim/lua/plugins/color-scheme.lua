@@ -1,7 +1,7 @@
 return {
   {
     "LazyVim/LazyVim",
-    opts = { colorscheme = "tokyonight" },
+    opts = { colorscheme = "kanagawa-paper" },
   },
   {
     "folke/tokyonight.nvim",
@@ -9,12 +9,15 @@ return {
     priority = 1000,
     opts = {},
   },
-  -- {
-  --   "thesimonho/kanagawa-paper.nvim",
-  --   lazy = false,
-  --   priority = 1000,
-  --   opts = {},
-  -- },
+  {
+    "thesimonho/kanagawa-paper.nvim",
+    lazy = false,
+    priority = 1000,
+    opts = {
+      cache = true,
+      dim_inactive = true,
+    },
+  },
   {
     "rebelot/kanagawa.nvim",
     lazy = false,
@@ -93,4 +96,13 @@ return {
   { "luisiacc/gruvbox-baby" },
   { "olivercederborg/poimandres.nvim" },
   { "kdheepak/monochrome.nvim" },
+  {
+    "Shatur/neovim-ayu",
+    lazy = false,
+    priority = 1000,
+    config = function() end,
+    opts = {
+      -- transparent = true,
+    },
+  },
 }

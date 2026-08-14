@@ -6,7 +6,7 @@ local function find_config(bufnr, config_files)
   })[1]
 end
 
-local function biome_or_prettier(bufnr)
+local function formatter_picker(bufnr)
   local has_biome_config = find_config(bufnr, { "biome.json", "biome.jsonc" })
   if has_biome_config then
     return { "biome", stop_after_first = true }
@@ -24,6 +24,15 @@ local function biome_or_prettier(bufnr)
     "prettier.config.js",
     "prettier.config.cjs",
   })
+
+  local has_oxfmt_config = find_config(bufnr, {
+    ".oxfmtrc.json",
+  })
+
+  if has_oxfmt_config then
+    return { "oxfmt", stop_after_first = true }
+  end
+
   if has_prettier_config then
     return { "prettier", stop_after_first = true }
   end
@@ -60,7 +69,7 @@ return {
       formatters_by_ft = (function()
         local result = {}
         for _, ft in ipairs(filetypes_with_dynamic_formatter) do
-          result[ft] = biome_or_prettier
+          result[ft] = formatter_picker
         end
         return result
       end)(),

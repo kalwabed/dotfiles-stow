@@ -1,8 +1,9 @@
-font-family="Iosevka Term Extended"
+font-family="Ioskeley Mono"
+#font-family="Iosevka Term Extended"
 # font-family = "Fira Code"
 font-size=12
-# theme="Kanagawa Wave"
-theme="TokyoNight Moon"
+# theme="TokyoNight Moon"
+theme="kanagawa-paper-ink"
 
 macos-option-as-alt=true
 macos-titlebar-style=hidden
@@ -17,5 +18,6 @@ background-blur-radius=20
 background-opacity=0.80
 background-blur=true
 keybind = shift+enter=text:\x1b\r
+notify-on-command-finish = unfocused
 
 # command = /opt/homebrew/bin/fish

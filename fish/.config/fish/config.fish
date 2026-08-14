@@ -11,14 +11,16 @@ end
 starship init fish | source
 # Setup brew
 eval "$(/opt/homebrew/bin/brew shellenv)"
-set fish_greeting ""
+set -gx HOMEBREW_NO_REQUIRE_TAP_TRUST 1
 
+set fish_greeting ""
 set -gx LC_CTYPE en_US.UTF-8
 set -gx LC_ALL en_US.UTF-8
 set -gx myname kalwabed
 set -gx EDITOR nvim
 set fzf_preview_file_cmd nvim
 set -g fish_key_bindings fish_vi_key_bindings
+alias docker=podman
 
 # Format man pages
 set -x MANROFFOPT -c
@@ -76,33 +78,12 @@ abbr -a -g jctl "journalctl -p 3 -xb"
 abbr -a -g nv nvim
 abbr -a -g gpp "git pull -p"
 abbr -a -g gms "git pull -p && git pull origin master"
-
-# pnpm alias
-abbr -a -g pn pnpm
-abbr -a -g pni "pnpm install"
-abbr -a -g pna "pnpm add"
-abbr -a -g pnad "pnpm add -D"
-abbr -a -g pnu "pnpm up -Li"
-abbr -a -g pnd "pnpm run dev"
-
-alias ..='cd ..'
-alias ...='cd ../..'
-alias ....='cd ../../..'
-alias .....='cd ../../../..'
-alias ......='cd ../../../../..'
-
-# bun
-set -x BUN_INSTALL "$HOME/.bun"
-set -x PATH $BUN_INSTALL/bin $PATH
-
-# deno
-set -x DENO_INSTALL "$HOME/.deno"
-set -x PATH $DENO_INSTALL/bin $PATH
+abbr -a -g oc opencode
 
 # pnpm
 set -gx PNPM_HOME /Users/khawarizm/Library/pnpm
-if not string match -q -- $PNPM_HOME $PATH
-    set -gx PATH "$PNPM_HOME" $PATH
+if not string match -q -- "$PNPM_HOME/bin" $PATH
+    set -gx PATH "$PNPM_HOME/bin" $PATH
 end
 # pnpm end
 
@@ -111,3 +92,13 @@ fish_add_path /Users/khawarizm/.antigravity/antigravity/bin
 
 # Created by `pipx` on 2026-02-08 01:05:04
 set PATH $PATH /Users/khawarizm/.local/bin
+
+# Added by Antigravity
+fish_add_path /Users/khawarizm/.antigravity/antigravity/bin
+
+# Added by Antigravity IDE
+fish_add_path /Users/khawarizm/.antigravity-ide/antigravity-ide/bin
+
+# pi 9router
+set -Ux ROUTER_API_KEY sk-85c22e4d5b9c9f78-w4o6dp-6ac445fb
+set -Ux ROUTER_API_BASE "http://172.27.240.12:20128/v1"
